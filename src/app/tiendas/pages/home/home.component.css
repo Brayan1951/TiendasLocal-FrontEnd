@@ -1,0 +1,22 @@
+.tienda {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  align-self: center;
+  background-color: aquamarine;
+  min-height: 15rem;
+  min-width: 12rem;
+  max-width: 35rem;
+  max-height: 25rem;
+  width: 50%;
+  height: 40%;
+}
+h1 {
+  color: white;
+}
+.info-tienda {
+  color: white;
+  /* background-color: azure; */
+}

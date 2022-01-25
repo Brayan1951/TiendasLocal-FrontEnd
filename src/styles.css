@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.bg-primary {
+  background-color: #041c32;
+}
+
+.menu {
+  padding: 0 !important;
+  min-height: 60rem;
+  /* min-width: 100%; */
+  /* max-width: 300px; */
+  width: 100%;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lista {
+  color: white;
+  background-color: #ecb365;
+}
+.config {
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  width: 75%;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.bg-blu {
+  background-color: #064663;
+}
+.bg-red {
+  background-color: #ee4a4a;
+}
+
+.bg-tema-p {
+  background-color: #041c32;
+}
+.bg-tema {
+  background-color: #04293a;
+}

@@ -1,0 +1,33 @@
+
+<div class="tienda">
+
+    <div class="img"></div>
+
+    <h1 class="text-center">Tienda: {{tienda.nombre|titlecase}}</h1>
+    <div class="info-tienda mx-5">
+        <form action="">
+            <div class="row mb-2">
+
+                <label class="col-5 col-sm-3 col-form-label" for="">Dueño</label>
+                <input class="col form-control" type="text"
+                    placeholder="{{tienda.jefe}}"
+                    disabled>
+            </div>
+            <div class="row mb-2">
+
+                <label class="col-5 col-sm-3 col-form-label" for="">Direccion</label>
+                <input class="col form-control" type="text"
+                    placeholder="{{tienda.direccion}}" disabled>
+            </div>
+            <div class="row mb-2">
+
+
+                <label class="col-5 col-sm-3 col-form-label" for="">Referencia</label>
+                <input class="col form-control" type="text"
+                    placeholder="{{tienda.referencia}}" disabled>
+            </div>
+
+        </form>
+    </div>
+
+</div>

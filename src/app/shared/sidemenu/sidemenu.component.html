@@ -1,0 +1,25 @@
+<div class="menu">
+
+    <div class="opciones">
+
+        <h2 class="text-center pt-2">Menu</h2>
+        <hr>
+        <ul class="list-group mx-2">
+            <li class="list-group-item mt-2 lista" [routerLink]=[item.ruta]
+                *ngFor="let
+                item of
+                menuItems" routerLinkActive="active">
+                <h4 class="text-center">
+                    {{item.texto}}
+                </h4>
+            </li>
+
+        </ul>
+    </div>
+    <div class="config mb-3">
+        <button class="btn bg-blu"><h4>Soporte</h4></button>
+        <button class="btn bg-red"><h4>Salir</h4></button>
+
+
+    </div>
+</div>

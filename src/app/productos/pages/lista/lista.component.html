@@ -1,0 +1,89 @@
+
+
+<div class="productos">
+    <mat-form-field appearance="standard" class="mt-5 form">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium"
+            #input>
+    </mat-form-field>
+    <table mat-table [dataSource]="datos" multiTemplateDataRows
+        class="mat-elevation-z8 tabla">
+        <ng-container [matColumnDef]="colum"
+            *ngFor="let
+            colum of columns;let i=index">
+            <th mat-header-cell *matHeaderCellDef>{{colum|titlecase}}</th>
+            <td mat-cell *matCellDef="let datos">{{
+                datos[colum]}}</td>
+        </ng-container>
+
+
+
+
+        <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element"
+                [attr.colspan]="columns.length">
+                <div class="example-element-detail producto-info"
+                    [@detailExpand]="element == expandedElement ? 'expanded' :
+                    'collapsed'">
+                    <form action="" class="formulario">
+                        <div class="row">
+                            <h4 class="text-center">
+
+                                {{element.descripcion}}
+                            </h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-5 col-sm-4 col-form-label">
+                                <label for="">Precio</label>
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control"
+                                    placeholder="precio">
+                            </div>
+
+                        </div>
+
+                        <div class="bottones">
+                            <button type="button" class="btn btn-danger"
+                                (click)="remove(element)">
+                                Eliminar
+                            </button>
+                            <button class="btn btn-info ms-1">
+                                Actualizar
+                            </button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </td>
+        </ng-container>
+
+
+
+
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <!-- <tr mat-row *matRowDef="let row; columns:columns"></tr> -->
+        <!-- <tr
+            mat-row
+            (click)="editar(row)"
+            *matRowDef="let row; columns: columns;"></tr>
+             -->
+        <tr mat-row *matRowDef="let element; columns: columns;"
+            class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"
+            (click)="expandedElement= expandedElement === element ? null :
+            element">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']"
+            class="example-detail-row"></tr>
+
+
+        <!-- si no encuentra -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter
+                "{{input.value}}"</td>
+        </tr>
+    </table>
+</div>
