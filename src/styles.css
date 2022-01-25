@@ -7,41 +7,32 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
+.spacer {
+  flex: 1 1 auto;
+}
 .bg-primary {
-  background-color: #041c32;
+  background-color: #041c32 !important;
 }
-
-.menu {
-  padding: 0 !important;
-  min-height: 60rem;
-  /* min-width: 100%; */
-  /* max-width: 300px; */
-  width: 100%;
-
-  color: white;
-  display: flex;
+.opciones {
+  display: flex !important;
   flex-direction: column;
-  justify-content: space-between;
 }
-
 .lista {
   color: white;
   background-color: #ecb365;
 }
-.config {
+/* .config {
   text-align: center;
-}
-
-.btn {
-  color: white;
-  width: 75%;
+} */
+*/ .btn {
+  background-color: #ecb365 !important;
+  width: 2200px;
   height: 40px;
-  border: 0;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-align: center;
-  align-items: center;
+  /* border: 0; */
+  /* border-radius: 5px; */
+  /* margin-top: 10px; */
+  /* text-align: center;
+  align-items: center; */
 }
 
 .bg-blu {
