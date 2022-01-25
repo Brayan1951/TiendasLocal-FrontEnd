@@ -16,6 +16,7 @@ body {
 .opciones {
   display: flex !important;
   flex-direction: column;
+  width: 200px;
 }
 .lista {
   color: white;
@@ -26,13 +27,8 @@ body {
 } */
 */ .btn {
   background-color: #ecb365 !important;
-  width: 2200px;
-  height: 40px;
-  /* border: 0; */
-  /* border-radius: 5px; */
-  /* margin-top: 10px; */
-  /* text-align: center;
-  align-items: center; */
+  width: 2200px !important;
+  height: 40px !important;
 }
 
 .bg-blu {
@@ -43,8 +39,15 @@ body {
 }
 
 .bg-tema-p {
-  background-color: #041c32;
+  background-color: #041c32 !important;
 }
+.bg-white {
+  background-color: white;
+}
+
 .bg-tema {
   background-color: #04293a;
+}
+.edit {
+  background-color: #ecb365;
 }

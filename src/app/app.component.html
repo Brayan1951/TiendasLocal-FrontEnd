@@ -11,9 +11,9 @@
   
   
 </div> -->
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen class="bg-tema">
   <mat-sidenav #sidenav mode="push" class="bg-tema-p">
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="text-center">
       <span>Menú</span>
       <span class="spacer"></span>
       <button mat-icon-button (click)="sidenav.toggle()">
@@ -21,7 +21,7 @@
       </button>
     </mat-toolbar>
     <mat-nav-list class="opciones">
-      <button class="mt-2 btn" [routerLink]=[item.ruta]
+      <button class="mx-2 mt-2 btn" [routerLink]=[item.ruta]
         *ngFor="let
         item of menuItems" routerLinkActive="active" mat-raised-button>
         {{item.texto}}
@@ -39,16 +39,15 @@
   </mat-sidenav>
 
 
-  <mat-toolbar>
-    <button mat-icon-button (click)="sidenav.toggle()">
+  <mat-toolbar class="bg-tema-p">
+    <button mat-icon-button class="bg-white" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span class="spacer"></span>
-    <button mat-button>
+    <button mat-raised-button color="warn">
       logout
     </button>
   </mat-toolbar>
-  <!-- <button (click)="sidenav.toggle()"></button> -->
   <router-outlet></router-outlet>
 
 

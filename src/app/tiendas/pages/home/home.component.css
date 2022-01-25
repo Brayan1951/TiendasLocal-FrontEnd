@@ -5,6 +5,7 @@
 }
 .img {
   align-self: center;
+  justify-content: center;
   background-color: aquamarine;
   min-height: 15rem;
   min-width: 12rem;
